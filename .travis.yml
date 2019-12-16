@@ -9,10 +9,10 @@ addons:
       - ubuntu-toolchain-r-test # if we don't specify this, the libstdc++6 we get is the wrong version
     packages:
       - libstdc++6
-      - fonts-droid
+      - fonts-droid-fallback
 
 before_script:
-  - git clone https://github.com/flutter/flutter.git -b beta --depth 1
+  - git clone https://github.com/flutter/flutter.git -b master
   - export PATH=$PATH:$(pwd)/flutter/bin
   - export FLUTTER_HOME=$(pwd)/flutter
   - flutter doctor
